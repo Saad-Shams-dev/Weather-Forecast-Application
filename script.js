@@ -141,7 +141,7 @@ function displayCurrentWeather(data) {
 
 // Returns emoji based on weather condition and temperature
 function getIcon(condition, temp) {
-  if (condition.includes("Rain")) return " 🌧️";
+  if (condition.includes("Rain")) return " 🌧️ ";
   if (condition.includes("Cloud")) return "☁️";
   if (temp > 30) return "☀️";
   if (temp < 10) return "❄️";
