@@ -4,8 +4,8 @@ A modern, responsive weather dashboard that provides real-time weather informati
 
 ## 🔗 Project Links
 
-- **Live Demo**: [Add your deployed link here]
-- **GitHub Repository**: [YOUR_GITHUB_REPOSITORY_LINK_HERE]
+- **Live Demo**: Not deployed (run index.html locally)
+- **GitHub Repository**: https://github.com/Saad-Shams-dev/Weather-Forecast-Application
 
 ## ✨ Features
 
@@ -237,12 +237,6 @@ This project is created for educational purposes. Feel free to use and modify.
 - Inspired by modern weather applications
 
 **Last Updated**: January 2026
-
-**Note**: Remember to replace placeholders:
-- `YOUR_GITHUB_REPOSITORY_LINK_HERE`
-- `Your Name`
-- `@yourusername`
-- `your.email@example.com`
 
 Made with ❤️ and JavaScript
 
