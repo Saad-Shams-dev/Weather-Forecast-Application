@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Page title shown in browser tab -->
+  <title>Weather Dashboard</title>
+
+  <!-- Responsive design for all screen sizes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS CDN for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon shown in browser tab -->
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body 
+  id="body"
+  class="min-h-screen flex justify-center items-center p-4 
+         bg-gradient-to-br from-blue-950 via-sky-900 to-cyan-900">
+
+  <!-- Main container -->
+  <main class="w-full max-w-5xl bg-gray-100 shadow-2xl rounded-xl">
+
+    <!-- Application header -->
+    <header class="bg-sky-600 text-white text-center py-4 font-bold text-xl rounded-t-xl">
+      Weather Dashboard
+    </header>
+
+    <!-- Main content section -->
+    <section class="flex flex-col md:flex-row p-6 gap-6">
+
+      <!-- LEFT PANEL : User input & controls -->
+      <aside class="w-full md:w-1/3 space-y-4">
+
+        <!-- City input label -->
+        <label class="font-semibold text-gray-800">Enter a City Name</label>
+
+        <!-- City name input field -->
+        <input
+          id="cityInput"
+          type="text"
+          placeholder="E.g., Delhi, London, Tokyo"
+          class="w-full p-2 border rounded focus:ring-2 focus:ring-emerald-500"
+        />
+
+        <!-- Search weather by city -->
+        <button
+          id="searchBtn"
+          class="w-full bg-sky-600 text-white py-2 rounded font-semibold hover:bg-sky-700">
+          Search
+        </button>
+
+        <!-- Get weather using user's current location -->
+        <button
+          id="locationBtn"
+          class="w-full bg-indigo-700 text-white py-2 rounded font-semibold hover:bg-indigo-800">
+          Use Current Location
+        </button>
+
+        <!-- Recently searched cities dropdown -->
+        <div id="recentContainer" class="hidden">
+          <label class="font-semibold text-gray-700">Recent Searches</label>
+          <select id="recentDropdown" class="w-full border p-2 rounded"></select>
+        </div>
+
+        <!-- Error message display -->
+        <p id="errorBox" class="text-red-600 font-semibold hidden"></p>
+      </aside>
+
+      <!-- RIGHT PANEL : Weather results -->
+      <section class="w-full md:w-2/3 space-y-5">
+
+        <!-- Extreme weather alert -->
+        <div
+          id="alertBox"
+          class="hidden bg-red-500 text-white p-2 rounded font-bold text-center">
+        </div>
+
+        <!-- Current weather card -->
+        <article
+          id="currentWeather"
+          class="hidden bg-indigo-950 text-white p-5 rounded-lg flex justify-between items-center shadow-lg">
+
+          <!-- Weather details -->
+          <div>
+            <h2 id="cityName" class="text-xl font-bold"></h2>
+
+            <!-- Temperature -->
+            <p id="temp"></p>
+
+            <!-- Celsius / Fahrenheit toggle -->
+            <button
+              id="unitToggle"
+              class="mt-2 px-3 py-1 bg-emerald-600 rounded text-sm font-bold">
+              °F
+            </button>
+
+            <!-- Wind speed -->
+            <p id="wind"></p>
+
+            <!-- Humidity -->
+            <p id="humidity"></p>
+          </div>
+
+          <!-- Weather condition & icon -->
+          <div class="text-center">
+            <p
+              id="condition"
+              class="bg-white/20 px-3 py-1 rounded-full text-sm font-bold mb-2">
+            </p>
+
+            <!-- Emoji-based weather icon -->
+            <div id="weatherIcon" class="text-6xl"></div>
+          </div>
+
+        </article>
+
+        <!-- 5-day weather forecast section -->
+        <section id="forecastSection" class="hidden">
+          <h3 class="font-bold text-lg text-gray-800 mb-2">5-Day Forecast</h3>
+
+          <!-- Forecast cards container -->
+          <div
+            id="forecastCards"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3">
+          </div>
+        </section>
+
+      </section>
+    </section>
+  </main>
+
+  <!-- External JavaScript file -->
+  <script src="script.js"></script>
+</body>
+
+</html>
