@@ -226,7 +226,7 @@ This project is created for educational purposes. Feel free to use and modify.
 ## 👨‍💻 Author
 
 **Saad Shams**
-- GitHub: [Saad-Shams-dev](YOUR_GITHUB_REPOSITORY_LINK_HERE)
+- GitHub: [Saad-Shams-dev](https://github.com/Saad-Shams-dev/Weather-Forecast-Application.git)
 - Email: saadshams163@gmail.com
 
 ## 🙏 Acknowledgments
